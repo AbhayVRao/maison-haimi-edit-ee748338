@@ -7,6 +7,12 @@ interface BeforeAfterComparisonProps {
   className?: string;
 }
 
+const LOVABLE_ASSET_HOST =
+  "https://86813c44-950e-47a0-a04b-b5764be49fcc.lovableproject.com";
+
+const assetUrl = (asset: { url: string }) =>
+  `${LOVABLE_ASSET_HOST}${asset.url}`;
+
 const BeforeAfterComparison = ({
   image,
   alt,
@@ -34,7 +40,7 @@ const BeforeAfterComparison = ({
 
       {/* Single watermark placed between before & after, centered on the image */}
       <img
-        src={mark.url}
+        src={assetUrl(mark)}
         alt=""
         aria-hidden="true"
         draggable={false}

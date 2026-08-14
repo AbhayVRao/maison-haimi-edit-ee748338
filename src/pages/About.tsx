@@ -18,15 +18,21 @@ import practiceDsc0401 from "@/assets/practice-gallery/practice-dsc0401.jpg.asse
 import practiceDsc0404 from "@/assets/practice-gallery/practice-dsc0404.jpg.asset.json";
 import practiceOperatory from "@/assets/practice-gallery/practice-operatory.jpg.asset.json";
 
+const LOVABLE_ASSET_HOST =
+  "https://86813c44-950e-47a0-a04b-b5764be49fcc.lovableproject.com";
+
+const assetUrl = (asset: { url: string }) =>
+  `${LOVABLE_ASSET_HOST}${asset.url}`;
+
 const practiceImages = [
   { src: facilityReception, label: "Reception" },
   { src: facilityTreatment, label: "Treatment Suite" },
   { src: facilityTreatment2, label: "Patient Care" },
-  { src: practiceOperatory.url, label: "Updated Operatory" },
-  { src: practiceConsultation.url, label: "Consultation Suite" },
-  { src: practiceDsc0391.url, label: "Clinical Detail" },
-  { src: practiceDsc0401.url, label: "Precision Setup" },
-  { src: practiceDsc0404.url, label: "Modern Interiors" },
+  { src: assetUrl(practiceOperatory), label: "Updated Operatory" },
+  { src: assetUrl(practiceConsultation), label: "Consultation Suite" },
+  { src: assetUrl(practiceDsc0391), label: "Clinical Detail" },
+  { src: assetUrl(practiceDsc0401), label: "Precision Setup" },
+  { src: assetUrl(practiceDsc0404), label: "Modern Interiors" },
 
 ];
 
