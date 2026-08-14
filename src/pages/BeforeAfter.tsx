@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import BeforeAfterComparison from "@/components/BeforeAfterComparison";
 import restorationImage from "@/assets/before-after-restoration.jpg";
+import beforeAfterHeroBg from "@/assets/before-after-hero-bg.jpg.asset.json";
 import whiteningImage from "@/assets/before-after-smile-whitening.jpg";
 import {
   veneersCases,
@@ -30,81 +31,47 @@ const BeforeAfter = () => {
         path="/before-after"
       />
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-end">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&q=80)`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-charcoal/40 to-transparent" />
-        </div>
-        <div className="relative z-10 container mx-auto px-4 py-16 md:py-24">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white tracking-wide uppercase mb-6"
-          >
-            Before & After
-          </motion.h1>
-          <motion.nav
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-center gap-2 font-body text-sm text-white/80"
-          >
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-white">Before & After</span>
-          </motion.nav>
-        </div>
-      </section>
-
-      {/* Intro + Placeholder */}
-      <section className="relative z-10 py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
-            <span className="font-display text-2xl md:text-3xl italic text-gold mb-2 block">
-              Real
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground tracking-wide uppercase mb-6">
-              Transformations
-            </h2>
-            <p className="font-body text-muted-foreground leading-relaxed text-base md:text-lg">
-              Every smile tells a story. Explore our gallery of transformations each one
-              a testament to the artistry and precision that defines our practice.
-            </p>
-          </motion.div>
-
-          <div className="grid gap-8 lg:grid-cols-3">
-            {beforeAfterCases.map((caseItem, index) => (
-              <motion.div
-                key={caseItem.alt}
+      <section className="relative bg-charcoal overflow-hidden">
+        <div className="container mx-auto px-4 py-8 md:py-12">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-center">
+            <div className="max-w-xl">
+              <motion.h1
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="font-display text-3xl md:text-4xl lg:text-5xl text-white tracking-wide uppercase mb-4"
               >
-                <BeforeAfterComparison
-                  image={caseItem.image}
-                  alt={caseItem.alt}
-                  split={caseItem.split}
-                  className="border border-border"
-                />
-              </motion.div>
-            ))}
-
+                Before & After
+              </motion.h1>
+              <motion.nav
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex items-center gap-2 font-body text-sm text-white/80"
+              >
+                <Link to="/" className="hover:text-white transition-colors">Home</Link>
+                <span>/</span>
+                <span className="text-white">Before & After</span>
+              </motion.nav>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.9, delay: 0.15 }}
+              className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl mx-auto w-full max-w-xs md:max-w-sm"
+            >
+              <img
+                src={beforeAfterHeroBg.url}
+                alt="Porcelain veneer smile transformation before and after"
+                className="w-full h-auto object-contain"
+                loading="eager"
+              />
+            </motion.div>
           </div>
-
         </div>
       </section>
+
+
 
       {/* Veneers Before & After */}
       <section className="relative z-10 py-16 md:py-24 bg-background">
@@ -329,70 +296,6 @@ const BeforeAfter = () => {
 
 
 
-      {/* Patient Testimonials */}
-      <section className="relative z-10 py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-14"
-          >
-            <span className="font-display text-2xl md:text-3xl italic text-gold mb-2 block">
-              Patient
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground tracking-wide uppercase">
-              Testimonials
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
-              {
-                name: "Andrea Rothman",
-                treatment: "via Facebook",
-                quote: "Best dentist ever! Dr. Haimi is a caring and highly competent professional at the height of her career. Her work on my teeth, and on my children's teeth, is outstanding.",
-              },
-              {
-                name: "Jeanne Naclerio Pugliese",
-                treatment: "via Facebook",
-                quote: "Dr. Haimi is wonderful as is her entire staff! I trust her for everything related to my dental health. Highly recommend!",
-              },
-              {
-                name: "Joanne Horak",
-                treatment: "via Facebook",
-                quote: "Always so pleasant and professional. I have been going there for three years having major work done and I would never go anywhere else. Dr. Haimi is awesome.",
-              },
-            ].map((testimonial, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="rounded-3xl border border-border hover:border-gold/40 bg-card p-8 flex flex-col transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_hsl(var(--gold)/0.25)]"
-              >
-                <div className="flex gap-0.5 mb-4">
-                  {Array.from({ length: 5 }).map((_, j) => (
-                    <svg key={j} className="w-4 h-4 text-gold fill-current" viewBox="0 0 20 20">
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="font-body text-muted-foreground text-sm leading-relaxed italic flex-1 mb-6">
-                  "{testimonial.quote}"
-                </p>
-                <div>
-                  <p className="font-display text-foreground text-sm">{(() => { const p = testimonial.name.trim().split(/\s+/); return p.length > 1 ? `${p[0]} ${p[p.length-1][0]}.` : p[0]; })()}</p>
-                  <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold mt-1">
-                    {testimonial.treatment}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="relative z-10 py-20 md:py-32 bg-charcoal">
