@@ -15,6 +15,12 @@ import {
   invisalignCases,
 } from "@/data/beforeAfterCases";
 
+const LOVABLE_ASSET_HOST =
+  "https://86813c44-950e-47a0-a04b-b5764be49fcc.lovableproject.com";
+
+const assetUrl = (asset: { url: string }) =>
+  `${LOVABLE_ASSET_HOST}${asset.url}`;
+
 const beforeAfterCases = [
   { image: restorationImage, alt: "Tooth restoration before and after", split: "horizontal" as const },
   { image: whiteningImage, alt: "Smile whitening before and after", split: "vertical" as const },
@@ -61,7 +67,7 @@ const BeforeAfter = () => {
               className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl mx-auto w-full max-w-xs md:max-w-sm"
             >
               <img
-                src={beforeAfterHeroBg.url}
+                src={assetUrl(beforeAfterHeroBg)}
                 alt="Porcelain veneer smile transformation before and after"
                 className="w-full h-auto object-contain"
                 loading="eager"
