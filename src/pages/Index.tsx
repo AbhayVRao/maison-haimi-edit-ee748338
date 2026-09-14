@@ -7,7 +7,7 @@ import ServicesPreview from "@/components/home/ServicesPreview";
 import AboutSection from "@/components/home/AboutSection";
 
 import TestimonialsSection from "@/components/home/TestimonialsSection";
-import heroImage from "@/assets/hero-lifestyle.jpg";
+import heroImage from "@/assets/hero-reception.jpg.asset.json";
 
 const Index = () => {
   return (
@@ -17,7 +17,7 @@ const Index = () => {
         description="Boutique cosmetic and family dentistry in Great Neck, NY. Conservative smile design, Invisalign, veneers, and implants with Dr. Eliza Haimi."
         path="/"
       />
-      <HeroSection heroImage={heroImage} />
+      <HeroSection heroImage={heroImage.url} />
       
       <ServicesPreview />
       
