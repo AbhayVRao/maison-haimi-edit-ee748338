@@ -7,7 +7,7 @@ import ServicesPreview from "@/components/home/ServicesPreview";
 import AboutSection from "@/components/home/AboutSection";
 
 import TestimonialsSection from "@/components/home/TestimonialsSection";
-import heroImage from "@/assets/hero-reception.jpg.asset.json";
+import heroImage from "@/assets/hero-reception-wide.jpg.asset.json";
 
 const Index = () => {
   return (
