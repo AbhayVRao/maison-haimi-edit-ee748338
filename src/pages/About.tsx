@@ -128,13 +128,13 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="relative aspect-[3/2] overflow-hidden group rounded-3xl bg-cream"
+                  className="relative aspect-[3/2] overflow-hidden group rounded-3xl"
                 >
                   <img
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
-                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </motion.div>
               ))}
