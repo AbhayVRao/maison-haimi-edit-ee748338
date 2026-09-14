@@ -17,7 +17,7 @@ const Index = () => {
         description="Boutique cosmetic and family dentistry in Great Neck, NY. Conservative smile design, Invisalign, veneers, and implants with Dr. Eliza Haimi."
         path="/"
       />
-      <HeroSection heroImage={heroImage} />
+      <HeroSection heroImage={heroImage.url} />
       
       <ServicesPreview />
       
