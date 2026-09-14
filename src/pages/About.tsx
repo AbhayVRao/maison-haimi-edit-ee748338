@@ -18,6 +18,11 @@ import practiceNew07 from "@/assets/practice-gallery/practice-new-07.jpg.asset.j
 import practiceNew08 from "@/assets/practice-gallery/practice-new-08.jpg.asset.json";
 import practiceNew09 from "@/assets/practice-gallery/practice-new-09.jpg.asset.json";
 import practiceNew10 from "@/assets/practice-gallery/practice-new-10.jpg.asset.json";
+import practiceNew11 from "@/assets/practice-gallery/practice-new-11.jpg.asset.json";
+import practiceNew12 from "@/assets/practice-gallery/practice-new-12.jpg.asset.json";
+import practiceNew13 from "@/assets/practice-gallery/practice-new-13.jpg.asset.json";
+import practiceNew14 from "@/assets/practice-gallery/practice-new-14.jpg.asset.json";
+import practiceNew15 from "@/assets/practice-gallery/practice-new-15.jpg.asset.json";
 
 const practiceImages = [
   { src: practiceNew01.url, alt: "Reception Desk" },
@@ -30,6 +35,11 @@ const practiceImages = [
   { src: practiceNew08.url, alt: "Office Hallway" },
   { src: practiceNew09.url, alt: "Reception Lounge" },
   { src: practiceNew10.url, alt: "Welcome Desk" },
+  { src: practiceNew11.url, alt: "Office Corridor" },
+  { src: practiceNew12.url, alt: "Front Desk" },
+  { src: practiceNew13.url, alt: "Hallway View" },
+  { src: practiceNew14.url, alt: "Sterilization Suite" },
+  { src: practiceNew15.url, alt: "Digital Consultation" },
 ];
 
 
