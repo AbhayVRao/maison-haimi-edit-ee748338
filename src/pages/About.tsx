@@ -4,30 +4,32 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import AboutSection from "@/components/home/AboutSection";
-import facilityReception from "@/assets/facility-reception.jpg";
-import facilityTreatment from "@/assets/facility-treatment.jpg";
-import facilityTreatment2 from "@/assets/facility-treatment-2.jpg";
-
 import facilityTechnology from "@/assets/facility-technology.jpg";
 import facilityTechnology2 from "@/assets/facility-technology-2.jpg";
 import facilityTechnology3 from "@/assets/facility-technology-3.jpg";
 import facilityTechnology4 from "@/assets/facility-technology-4.jpg";
-import practiceConsultation from "@/assets/practice-gallery/practice-consultation.jpg.asset.json";
-import practiceDsc0391 from "@/assets/practice-gallery/practice-dsc0391.jpg.asset.json";
-import practiceDsc0401 from "@/assets/practice-gallery/practice-dsc0401.jpg.asset.json";
-import practiceDsc0404 from "@/assets/practice-gallery/practice-dsc0404.jpg.asset.json";
-import practiceOperatory from "@/assets/practice-gallery/practice-operatory.jpg.asset.json";
+import practiceNew01 from "@/assets/practice-gallery/practice-new-01.jpg.asset.json";
+import practiceNew02 from "@/assets/practice-gallery/practice-new-02.jpg.asset.json";
+import practiceNew03 from "@/assets/practice-gallery/practice-new-03.jpg.asset.json";
+import practiceNew04 from "@/assets/practice-gallery/practice-new-04.jpg.asset.json";
+import practiceNew05 from "@/assets/practice-gallery/practice-new-05.jpg.asset.json";
+import practiceNew06 from "@/assets/practice-gallery/practice-new-06.jpg.asset.json";
+import practiceNew07 from "@/assets/practice-gallery/practice-new-07.jpg.asset.json";
+import practiceNew08 from "@/assets/practice-gallery/practice-new-08.jpg.asset.json";
+import practiceNew09 from "@/assets/practice-gallery/practice-new-09.jpg.asset.json";
+import practiceNew10 from "@/assets/practice-gallery/practice-new-10.jpg.asset.json";
 
 const practiceImages = [
-  { src: facilityReception, label: "Reception" },
-  { src: facilityTreatment, label: "Treatment Suite" },
-  { src: facilityTreatment2, label: "Patient Care" },
-  { src: practiceOperatory.url, label: "Updated Operatory" },
-  { src: practiceConsultation.url, label: "Consultation Suite" },
-  { src: practiceDsc0391.url, label: "Clinical Detail" },
-  { src: practiceDsc0401.url, label: "Precision Setup" },
-  { src: practiceDsc0404.url, label: "Modern Interiors" },
-
+  { src: practiceNew01.url, alt: "Reception Desk" },
+  { src: practiceNew02.url, alt: "Treatment Room" },
+  { src: practiceNew03.url, alt: "Treatment Suite" },
+  { src: practiceNew04.url, alt: "3D CBCT Imaging" },
+  { src: practiceNew05.url, alt: "In-House Milling" },
+  { src: practiceNew06.url, alt: "Sterilization Center" },
+  { src: practiceNew07.url, alt: "Conference Room" },
+  { src: practiceNew08.url, alt: "Office Hallway" },
+  { src: practiceNew09.url, alt: "Reception Lounge" },
+  { src: practiceNew10.url, alt: "Welcome Desk" },
 ];
 
 
