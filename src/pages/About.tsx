@@ -113,23 +113,19 @@ const About = () => {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {practiceImages.map((img, i) => (
                 <motion.div
-                  key={img.label}
+                  key={img.alt}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="relative aspect-[3/4] overflow-hidden group"
+                  className="relative aspect-[3/4] overflow-hidden group rounded-3xl"
                 >
                   <img
                     src={img.src}
-                    alt={img.label}
+                    alt={img.alt}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
-                  <span className="absolute bottom-4 left-4 font-body text-xs tracking-[0.2em] uppercase text-cream">
-                    {img.label}
-                  </span>
                 </motion.div>
               ))}
             </div>
