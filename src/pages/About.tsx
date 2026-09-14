@@ -110,7 +110,7 @@ const About = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {practiceImages.map((img, i) => (
                 <motion.div
                   key={img.alt}
@@ -118,13 +118,13 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="relative aspect-[3/4] overflow-hidden group rounded-3xl"
+                  className="relative aspect-[3/2] overflow-hidden group rounded-3xl bg-cream"
                 >
                   <img
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
                   />
                 </motion.div>
               ))}
