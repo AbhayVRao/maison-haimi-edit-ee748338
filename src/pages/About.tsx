@@ -24,22 +24,28 @@ import practiceNew13 from "@/assets/practice-gallery/practice-new-13.jpg.asset.j
 import practiceNew14 from "@/assets/practice-gallery/practice-new-14.jpg.asset.json";
 import practiceNew15 from "@/assets/practice-gallery/practice-new-15.jpg.asset.json";
 
+const LOVABLE_ASSET_HOST =
+  "https://86813c44-950e-47a0-a04b-b5764be49fcc.lovableproject.com";
+
+const assetUrl = (asset: { url: string }) =>
+  `${LOVABLE_ASSET_HOST}${asset.url}`;
+
 const practiceImages = [
-  { src: practiceNew01.url, alt: "Reception Desk" },
-  { src: practiceNew02.url, alt: "Treatment Room" },
-  { src: practiceNew03.url, alt: "Treatment Suite" },
-  { src: practiceNew04.url, alt: "3D CBCT Imaging" },
-  { src: practiceNew05.url, alt: "In-House Milling" },
-  { src: practiceNew06.url, alt: "Sterilization Center" },
-  { src: practiceNew07.url, alt: "Conference Room" },
-  { src: practiceNew08.url, alt: "Office Hallway" },
-  { src: practiceNew09.url, alt: "Reception Lounge" },
-  { src: practiceNew10.url, alt: "Welcome Desk" },
-  { src: practiceNew11.url, alt: "Office Corridor" },
-  { src: practiceNew12.url, alt: "Front Desk" },
-  { src: practiceNew13.url, alt: "Hallway View" },
-  { src: practiceNew14.url, alt: "Sterilization Suite" },
-  { src: practiceNew15.url, alt: "Digital Consultation" },
+  { src: assetUrl(practiceNew01), alt: "Reception Desk" },
+  { src: assetUrl(practiceNew02), alt: "Treatment Room" },
+  { src: assetUrl(practiceNew03), alt: "Treatment Suite" },
+  { src: assetUrl(practiceNew04), alt: "3D CBCT Imaging" },
+  { src: assetUrl(practiceNew05), alt: "In-House Milling" },
+  { src: assetUrl(practiceNew06), alt: "Sterilization Center" },
+  { src: assetUrl(practiceNew07), alt: "Conference Room" },
+  { src: assetUrl(practiceNew08), alt: "Office Hallway" },
+  { src: assetUrl(practiceNew09), alt: "Reception Lounge" },
+  { src: assetUrl(practiceNew10), alt: "Welcome Desk" },
+  { src: assetUrl(practiceNew11), alt: "Office Corridor" },
+  { src: assetUrl(practiceNew12), alt: "Front Desk" },
+  { src: assetUrl(practiceNew13), alt: "Hallway View" },
+  { src: assetUrl(practiceNew14), alt: "Sterilization Suite" },
+  { src: assetUrl(practiceNew15), alt: "Digital Consultation" },
 ];
 
 
