@@ -4,19 +4,25 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import AboutSection from "@/components/home/AboutSection";
-import facilityReception from "@/assets/facility-reception.jpg";
-import facilityTreatment from "@/assets/facility-treatment.jpg";
-import facilityTreatment2 from "@/assets/facility-treatment-2.jpg";
-
 import facilityTechnology from "@/assets/facility-technology.jpg";
 import facilityTechnology2 from "@/assets/facility-technology-2.jpg";
 import facilityTechnology3 from "@/assets/facility-technology-3.jpg";
 import facilityTechnology4 from "@/assets/facility-technology-4.jpg";
-import practiceConsultation from "@/assets/practice-gallery/practice-consultation.jpg.asset.json";
-import practiceDsc0391 from "@/assets/practice-gallery/practice-dsc0391.jpg.asset.json";
-import practiceDsc0401 from "@/assets/practice-gallery/practice-dsc0401.jpg.asset.json";
-import practiceDsc0404 from "@/assets/practice-gallery/practice-dsc0404.jpg.asset.json";
-import practiceOperatory from "@/assets/practice-gallery/practice-operatory.jpg.asset.json";
+import practiceNew01 from "@/assets/practice-gallery/practice-new-01.jpg.asset.json";
+import practiceNew02 from "@/assets/practice-gallery/practice-new-02.jpg.asset.json";
+import practiceNew03 from "@/assets/practice-gallery/practice-new-03.jpg.asset.json";
+import practiceNew04 from "@/assets/practice-gallery/practice-new-04.jpg.asset.json";
+import practiceNew05 from "@/assets/practice-gallery/practice-new-05.jpg.asset.json";
+import practiceNew06 from "@/assets/practice-gallery/practice-new-06.jpg.asset.json";
+import practiceNew07 from "@/assets/practice-gallery/practice-new-07.jpg.asset.json";
+import practiceNew08 from "@/assets/practice-gallery/practice-new-08.jpg.asset.json";
+import practiceNew09 from "@/assets/practice-gallery/practice-new-09.jpg.asset.json";
+import practiceNew10 from "@/assets/practice-gallery/practice-new-10.jpg.asset.json";
+import practiceNew11 from "@/assets/practice-gallery/practice-new-11.jpg.asset.json";
+import practiceNew12 from "@/assets/practice-gallery/practice-new-12.jpg.asset.json";
+import practiceNew13 from "@/assets/practice-gallery/practice-new-13.jpg.asset.json";
+import practiceNew14 from "@/assets/practice-gallery/practice-new-14.jpg.asset.json";
+import practiceNew15 from "@/assets/practice-gallery/practice-new-15.jpg.asset.json";
 
 const LOVABLE_ASSET_HOST =
   "https://86813c44-950e-47a0-a04b-b5764be49fcc.lovableproject.com";
@@ -25,15 +31,21 @@ const assetUrl = (asset: { url: string }) =>
   `${LOVABLE_ASSET_HOST}${asset.url}`;
 
 const practiceImages = [
-  { src: facilityReception, label: "Reception" },
-  { src: facilityTreatment, label: "Treatment Suite" },
-  { src: facilityTreatment2, label: "Patient Care" },
-  { src: assetUrl(practiceOperatory), label: "Updated Operatory" },
-  { src: assetUrl(practiceConsultation), label: "Consultation Suite" },
-  { src: assetUrl(practiceDsc0391), label: "Clinical Detail" },
-  { src: assetUrl(practiceDsc0401), label: "Precision Setup" },
-  { src: assetUrl(practiceDsc0404), label: "Modern Interiors" },
-
+  { src: assetUrl(practiceNew01), alt: "Reception Desk" },
+  { src: assetUrl(practiceNew02), alt: "Treatment Room" },
+  { src: assetUrl(practiceNew03), alt: "Treatment Suite" },
+  { src: assetUrl(practiceNew04), alt: "3D CBCT Imaging" },
+  { src: assetUrl(practiceNew05), alt: "In-House Milling" },
+  { src: assetUrl(practiceNew06), alt: "Sterilization Center" },
+  { src: assetUrl(practiceNew07), alt: "Conference Room" },
+  { src: assetUrl(practiceNew08), alt: "Office Hallway" },
+  { src: assetUrl(practiceNew09), alt: "Reception Lounge" },
+  { src: assetUrl(practiceNew10), alt: "Welcome Desk" },
+  { src: assetUrl(practiceNew11), alt: "Office Corridor" },
+  { src: assetUrl(practiceNew12), alt: "Front Desk" },
+  { src: assetUrl(practiceNew13), alt: "Hallway View" },
+  { src: assetUrl(practiceNew14), alt: "Sterilization Suite" },
+  { src: assetUrl(practiceNew15), alt: "Digital Consultation" },
 ];
 
 
@@ -114,26 +126,22 @@ const About = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {practiceImages.map((img, i) => (
                 <motion.div
-                  key={img.label}
+                  key={img.alt}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className="relative aspect-[3/4] overflow-hidden group"
+                  className="relative aspect-[3/2] overflow-hidden group rounded-3xl"
                 >
                   <img
                     src={img.src}
-                    alt={img.label}
+                    alt={img.alt}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
-                  <span className="absolute bottom-4 left-4 font-body text-xs tracking-[0.2em] uppercase text-cream">
-                    {img.label}
-                  </span>
                 </motion.div>
               ))}
             </div>
